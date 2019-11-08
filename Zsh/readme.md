@@ -1,0 +1,1 @@
+To use this configuration file first of all ensure that ZSH is your default shell environment and Oh-My-Zsh! is installed.
