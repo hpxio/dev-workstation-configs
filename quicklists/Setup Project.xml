@@ -1,0 +1,5 @@
+<list display="Setup Project" description="Steps for Setting-up Projects &amp; Scopes">
+  <action id="ImportModuleFromImlFile" />
+  <action id="QuickList.$Separator$" />
+  <action id="ScopeView.EditScopes" />
+</list>

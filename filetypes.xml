@@ -1,0 +1,9 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping ext="exec" type="PLAIN_TEXT" />
+      <mapping ext="3_paysys-3699_add_reference_token" type="PLAIN_TEXT" />
+      <mapping ext="values" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>
