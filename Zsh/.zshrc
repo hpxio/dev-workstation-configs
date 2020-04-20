@@ -126,6 +126,14 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Hom
 
 
 # **************************************************************************************************************************************************** #
+# GLOBAL ALIASES - Commons
+# **************************************************************************************************************************************************** #
+alias -g G=" | grep -i "
+alias -g ST=" -DskipTests"
+# **************************************************************************************************************************************************** #
+
+
+# **************************************************************************************************************************************************** #
 # SUFFIX ALIASES - Commons
 # **************************************************************************************************************************************************** #
 alias -s xml=vim
@@ -179,13 +187,15 @@ alias cdmvn='cd ~/Warehouse/maven/conf; pwd;'
 # **************************************************************************************************************************************************** #
 # MAVEN BASED ALIASES
 # **************************************************************************************************************************************************** #
-# c - clean | i - install | st - skipTest | #
+# c - clean | i - install | st - skipTest | v - verify #
 alias mvn-cci='mvn clean -c install'
 alias mvn-cci-st='mvn clean -c install -DskipTest'
 alias mvn-ci-st='mvn clean install -DskipTests=true'
 alias mvn-ci='mvn clean install'
 alias mvn-sbr='mvn spring-boot:run'
 alias mvn-sbr-st='mvn spring-boot:run -DskipTest'
+
+alias mvn-cv='mvn clean -ff -U verify'
 # **************************************************************************************************************************************************** #
 
 
@@ -193,4 +203,16 @@ alias mvn-sbr-st='mvn spring-boot:run -DskipTest'
 # GIT ALIASES - Augmentation to OMZ Git Plugin
 # **************************************************************************************************************************************************** #
 alias lsgit='alias | grep -i git | sort -R | head -100'
+# **************************************************************************************************************************************************** #
+
+
+# **************************************************************************************************************************************************** #
+# QUICK LINKS - Developer References Quick Links
+# **************************************************************************************************************************************************** #
+alias ihspa-mysql-prop='echo "https://gitlab.com/rc-development/rc-development-configurations/CommonConfigurations/blob/local/SpringBootApps/MySqlSpringBootApplication.properties"'
+alias ihspa-h2-prop='echo "https://gitlab.com/rc-development/rc-development-configurations/CommonConfigurations/blob/local/SpringBootApps/H2SpringBootApplication.properties"'
+alias ihspa-commit-specs='echo "https://gitlab.com/rc-specifications/SourceCodeManagement/blob/local/Commit%20Logs%20Specifications%20-%20V1.0.0.md"'
+alias ihspa-changelog-specs='echo "https://gitlab.com/rc-specifications/SourceCodeManagement/blob/local/CHANGELOG%20Template%20-%20V1.0.0.md"'
+alias ihspa-semver-specs='echo "https://gitlab.com/rc-specifications/spring-boot-application/blob/master/Versioning%20Specification%20-%20V1.0.0.md"'
+alias ihspa-spring-boot-specs='echo "https://gitlab.com/rc-specifications/spring-boot-application/blob/master/Spring%20Boot%20Application%20-%20Specification%20-%20V1.0.0.md"'
 # **************************************************************************************************************************************************** #
