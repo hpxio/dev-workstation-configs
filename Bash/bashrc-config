@@ -7,9 +7,8 @@
 source ~/.git-completion.bash
 
 # PAth & Default Version Settings #
-export M2_HOME=/Users/Harsh/Warehouse/maven
+export M2_HOME=~/Warehouse/maven
 export PATH=$PATH:$M2_HOME/bin:$JAVA_HOME
-# export APPS_CONFIG=/Users/Harsh/Workspace/Config
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
 
 # Terminal Settings for Mac : Custom Coloring & Highlights #
