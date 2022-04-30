@@ -1,0 +1,189 @@
+
+##############################################################################################################
+# 			************** !!! DO NOT CHANGE SETTING BELOW !!! **************
+##############################################################################################################
+
+# ********************************************************************************************************** #
+# 			Details about below commands are available in the Oh-my-Zsh site.
+# ********************************************************************************************************** #
+
+# ***** OMZ Specific Configurations ***** #
+export ZSH="/Users/xio/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+CASE_SENSITIVE="true"
+
+zstyle ':omz:update' mode auto
+
+# ***** Which plugins would you like to load? ***** #
+plugins=(git)
+
+# ***** Disable COMPFIX error notification ***** #
+ZSH_DISABLE_COMPFIX=true
+
+source $ZSH/oh-my-zsh.sh
+
+##############################################################################################################
+# 			************** !!! DO NOT CHANGE SETTING ABOVE !!! **************
+##############################################################################################################
+
+# ---------------------------------------------------------------------------------------------------------- #
+
+##############################################################################################################
+# 			************** USER CONFIGURATION - START **************
+##############################################################################################################
+
+
+# ********************************************************************************************************** #
+# 			************** ENVIRONMENT VARIABLES & PATHS **************
+# ********************************************************************************************************** #
+export JAVA15_PATH='/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home'
+export JAVA11_PATH='/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home'
+export JAVA8_PATH='/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home'
+
+export M2_HOME='/Users/Harsh/Warehouse/maven'
+export PATH=$PATH:$M2_HOME/bin:$HOME/.jenv/bin
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 				************** JAVA ALIASES **************
+# ********************************************************************************************************** #
+alias java-cacerts='ls $JAVA_HOME/jre/lib/security/cacerts'
+
+alias java0='export JAVA_HOME=$JAVA8_PATH';
+alias java8='export JAVA_HOME=$JAVA8_PATH; echo $JAVA_HOME; java -version'
+alias java11='export JAVA_HOME=$JAVA11_PATH; echo $JAVA_HOME; java -version'
+alias java15='export JAVA_HOME=$JAVA15_PATH; echo $JAVA_HOME; java -version'
+java0;
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 			************** GLOBAL ALIASES - Commons **************
+# ********************************************************************************************************** #
+alias -g _G=" | grep -i "
+alias -g _ST="-DskipTest"
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 			************** SUFFIX ALIASES - Commons **************
+# ********************************************************************************************************** #
+alias -s xml=vim
+alias -s md=vim
+alias -s txt=vim
+alias -s java=vim
+alias -s json=vim
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 		************** CUSTOM ALIASES - Frequently Used Aliases **************
+# ********************************************************************************************************** #
+alias zshconfig="less ~/.zshrc"
+alias ohmyzsh="less ~/.oh-my-zsh"
+
+alias vim='vim --cmd "syntax on"'
+
+alias lr='ls -ltr'
+alias aa='ls -ltria'
+alias ff='ls -w'
+
+alias qq='clear;clear;clear'
+alias rr='fc -e - '
+
+alias src='source ~/.zshrc'
+alias srced='vim ~/.zshrc'
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 		************** CUSTOM PATH ALIASES - Project Specific **************
+# ********************************************************************************************************** #
+alias cdw='cd ~/Workspace/; qq; pwd; la'
+alias cds='cd ~/Warehouse/; qq; pwd; la'
+
+alias cdpr='cd ~/Workspace/Workbench/Repository/Production; qq; pwd; la' 	# Production Repositories #
+alias cdp='cd ~/Workspace/Workbench/Repository/Personal; qq; pwd; la' 		# Personal Repositories #
+alias cdsb='cd ~/Workspace/Workbench/Repository/Sandbox; qq; pwd; la'		# Sandbox Repositories #
+
+alias github='cd ~/Workspace/Workbench/Repository/Production/GitHub; qq; pwd; la'
+alias gitlab='cd ~/Workspace/Workbench/Repository/Production/GitLab; qq; pwd; la'
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 			************** MAVEN BASED ALIASES **************
+# ********************************************************************************************************** #
+# c - clean | i - install | st - skipTest | v - verify
+# ********************************************************************************************************** #
+alias mvn-cci='mvn clean -c install'
+alias mvn-cci-st='mvn clean -c install -DskipTest'
+alias mvn-ci-st='mvn clean install -DskipTests=true'
+alias mvn-ci='mvn clean install'
+alias mvn-sbr='mvn spring-boot:run'
+alias mvn-ccob=' mvn clean cobertura:cobertura'
+alias mvn-sbr-st='mvn spring-boot:run -DskipTest'
+alias mvn-cv='mvn clean -ff -U verify'
+alias mvn-qq='mvn clean'
+alias mvn-dep='mvn dependency:tree'
+
+alias _JDOC='-Dmaven.javadoc.skip=true'
+alias java-all='/usr/libexec/java_home -V'
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 		************** GIT ALIASES - Augmentation to OMZ Git Plugin **************
+# ********************************************************************************************************** #
+alias lsgit='alias | grep -i git | sort -R | head -100'
+alias lsgitg='git config --list'
+alias lsgitloc='git config --list --show-origin'
+
+alias setgitloc='git config --local user.name "HPxIO"; git config --local user.email "hpx.io@keemail.me"'
+# ********************************************************************************************************** #
+
+
+# ********************************************************************************************************** #
+# 				************** BREW ALIASES **************
+# ********************************************************************************************************** #
+# BREW INFO
+alias _binfo='brew info '
+# BREW DOCTOR
+alias _bsos='brew doctor'
+# BREW CLEANUP
+alias _bcls='brew cleanup'
+# BREW SEARCH
+alias _blook='brew search '
+# BREW LIST
+alias _blst='brew list'
+# BREW OUTDATED
+alias _bold='brew outdated'
+# BREW INSTALL
+alias _bget='brew install '
+# BREW HOME
+alias _bhome='brew home '
+# BREW CASK SEARCH
+alias _bclook='brew search --cask '
+# BREW CASK INSTALL
+alias _bcget='brew cask install '
+# BREW CASK LIST
+alias _bclst='brew list --cask'
+# BREW CASK INFO
+alias _bcinfo='brew cask info '
+# BREW UPDATE
+alias _bupd='brew update'
+# BREW UPGRADE
+alias _bupg='brew upgrade'
+# BREW LINK 
+alias _blink='brew link '
+# BREW LINK OVERRIDE**
+alias _bolink='brew link --overwrite'
+# ********************************************************************************************************** #
+
+
+##############################################################################################################
+# 								************** USER CONFIGURATION - END **************
+##############################################################################################################
+
